@@ -1,0 +1,170 @@
+@source ".";
+
+@theme {
+    --text-xs: 13px;
+    --text-sm: 14px;
+    --text-base: 15px;
+    --text-lg: 16px;
+    --text-xl: 18px;
+    --text-2xl: 20px;
+    --text-3xl: 22px;
+    --text-4xl: 24px;
+    --text-5xl: 26px;
+    --text-6xl: 28px;
+    --text-7xl: 34px;
+    --text-8xl: 40px;
+
+    --color-primary-100: #E0E6FA;
+    --color-primary-200: #BDCAF4;
+    --color-primary-300: #7B95EA;
+    --color-primary-400: #3960E0;
+    --color-primary-500: #1E3FBE;
+    --color-primary-600: #173491;
+    --color-primary-700: #132B77;
+    --color-primary-800: #0E1F58;
+    --color-primary-900: #091439;
+
+    --color-bg-100: #FFFFFF;
+    --color-bg-200: #FEFEFF;
+    --color-bg-300: #FCFCFD;
+    --color-bg-400: #F9F9FB;
+    --color-bg-500: #F6F6FA;
+    --color-bg-600: #EFEFF4;
+    --color-bg-700: #E9EAF0;
+
+    --color-neutral-100: #F8F8F8;
+    --color-neutral-200: #F0F0F0;
+    --color-neutral-300: #D6D6D7;
+    --color-neutral-400: #B9B9BE;
+    --color-neutral-500: #747478;
+    --color-neutral-600: #57575A;
+    --color-neutral-700: #3B3B3E;
+    --color-neutral-800: #2A2A2C;
+    --color-neutral-900: #171719;
+
+    --color-text-100: #B1B1B9;
+    --color-text-300: #8B8B92;
+    --color-text-500: #636368;
+    --color-text-700: #48484B;
+    --color-text-900: #3B3B3E;
+
+    --color-danger-100: #FFE1E5;
+    --color-danger-200: #FFC2CA;
+    --color-danger-300: #FFA5B3;
+    --color-danger-400: #FF8198;
+    --color-danger-500: #FF557B;
+    --color-danger-600: #F53D66;
+
+    --color-success-100: #B2E4C5;
+    --color-success-300: #63D994;
+    --color-success-500: #48D382;
+    
+    --color-warning-100: #FFD7BF;
+    --color-warning-300: #FFA773;
+    --color-warning-500: #FE8B56;
+
+    --color-links-100: #E0E6FA;
+    --color-links-300: #7B95EA;
+    --color-links-500: #1E3FBE;
+    --color-links-700: #173491;
+
+    --color-white: white;
+    --color-black: black;
+    --color-transparent: transparent;
+
+    --button-padding-horizontal: 12px;
+    --button-radius: 12px;
+    --button-height: 36px;
+    --button-border-width: 1px;
+    --button-shadow-blur: 2px;
+    --button-shadow-spread: -1px;
+    --button-shadow-y: 1px;
+
+    --input-padding-horizontal: 12px;
+    --input-radius: 12px;
+    --input-height: 36px;
+    --input-border-width: 1px;
+    --input-shadow-blur: 2px;
+    --input-shadow-spread: -1px;
+    --input-shadow-y: 1px;
+
+    --input-ifta-padding-horizontal: 16px;
+    --input-ifta-height: 56px;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+
+    --shadow-button: 0 var(--button-shadow-y) var(--button-shadow-blur) var(--button-shadow-spread) var(--tw-shadow-color);
+    --shadow-input: 0 var(--input-shadow-y) var(--input-shadow-blur) var(--input-shadow-spread) var(--tw-shadow-color);
+}
+
+.body-xs, .body-xs-md {
+    @apply text-xs leading-4.5;
+}
+
+.body-s, .body-s-md {
+    @apply text-sm leading-5;
+}
+
+.body-m, .body-m-md {
+    @apply text-base leading-5.5;
+}
+
+.body-l, .body-l-md {
+    @apply text-lg leading-6;
+}
+
+.body-xs-md, .body-s-md, .body-m-md, .body-l-md {
+    @apply font-medium;
+}
+
+.heading-2xl {
+    @apply text-6xl leading-10 font-semibold;
+}
+
+.heading-xl {
+    @apply text-5xl leading-9 font-semibold;
+}
+
+.heading-l {
+    @apply text-3xl leading-8 font-semibold;
+}
+
+.heading-m {
+    @apply text-2xl leading-7 font-medium;
+}
+
+.heading-s {
+    @apply text-xl leading-6.5 font-medium;
+}
+
+.heading-xs {
+    @apply text-lg leading-6 font-medium;
+}
+
+@media screen(sm) {
+    .heading-2xl {
+        @apply text-8xl leading-11.5 font-semibold;
+    }
+
+    .heading-xl {
+        @apply text-7xl leading-10 font-semibold;
+    }
+
+    .heading-l {
+        @apply text-4xl leading-8 font-semibold;
+    }
+
+    .heading-m {
+        @apply text-3xl leading-7 font-medium;
+    }
+
+    .heading-s {
+        @apply text-xl leading-6.5 font-medium;
+    }
+
+    .heading-xs {
+        @apply text-lg leading-6 font-medium;
+    }
+}
