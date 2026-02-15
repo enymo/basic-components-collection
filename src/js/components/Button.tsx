@@ -38,11 +38,14 @@ export const createButton = <T extends ClickableProps>(Clickable: FC<T>) => (pro
         <Clickable 
             {...props}
             {...glissade}
-            className={clsx("relative cursor-pointer disabled:cursor-not-allowed body-m-md h-(--button-height) border-(--button-border-width) rounded-(--button-radius) px-(--button-padding-horizontal)", {
+            className={clsx("relative cursor-pointer disabled:cursor-not-allowed body-m-md h-(--button-height) rounded-(--button-radius) px-(--button-padding-horizontal)", {
                 "flex-row": iconPosition === "before",
                 "flex-row-reverse": iconPosition === "after",
-                "text-white fill-white bg-primary-500 border-primary-400 hover:bg-primary-600 hover:border-primary-500 disabled:bg-neutral-300 disabled:border-neutral-300": variant === "primary"
-            }, className)} 
+                "border-(length:--button-border-width) text-white fill-white bg-primary-500 border-primary-400 hover:bg-primary-600 hover:border-primary-500 disabled:bg-neutral-300 disabled:border-neutral-300": variant === "primary",
+                "border-(length:--button-border-width) text-white fill-white bg-neutral-700 border-neutral-600 hover:bg-neutral-800 hover:border-neutral-700 disabled:bg-neutral-300 disabled:border-neutral-300": variant === "secondary",
+                "text-text-700 fill-text-700 hover:text-text-900 hover:fill-text-900 disabled:text-text-100 disabled:fill-text-100": variant === "tertiary",
+                "border-(length:--button-border-width) text-primary-500 border-primary-500 fill-primary-500 hover:text-primary-600 hover:border-primary-600 hover:bg-primary-100 hover:fill-primary-600 disabled:border-neutral-300 disabled:text-text-100 disabled:fill-text-100": variant === "ghost"
+            }, className)}
         >
             <div className={clsx("size-full flex items-center justify-center", {"invisible": loading}, innerClassName)}>
                 {Icon && <Icon className="size-3" />}

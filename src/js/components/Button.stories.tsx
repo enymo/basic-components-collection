@@ -22,3 +22,24 @@ export const Primary: Story = {
         onClick: fn(() => sleep(2000))
     }
 }
+
+export const Secondary: Story = {
+    args: {
+        ...Primary.args,
+        variant: "secondary"
+    }
+}
+
+export const Tertiary: Story = {
+    args: {
+        ...Primary.args,
+        variant: "tertiary"
+    }
+}
+
+export const Ghost: Story = {
+    args: {
+        ...Primary.args,
+        variant: "ghost"
+    }
+}
