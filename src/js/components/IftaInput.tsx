@@ -52,7 +52,7 @@ export default function IftaInput({
                 )}>{label}</label>
                 <GlissadeInput ref={ref} {...props} disabled={disabled} id={id} className="px-(--input-ifta-padding-horizontal) pb-1.5 outline-none body-m text-text-900 disabled:text-text-500 appearance-none peer" />
                 {props.type === "select" && <Chevron className={clsx(
-                    "absolute w-4 fill-neutral-700 top-1/2 -translate-y-1/2 right-(--input-ifta-padding-horizontal) peer-open:rotate-180 transition duration-200 ease-in-out"
+                    "absolute w-4 fill-neutral-700 top-1/2 -translate-y-1/2 right-(--input-ifta-padding-horizontal) peer-open:rotate-180 transition-transform duration-200 ease-in-out"
                 )} />}
             </div>
             {error && <Error>{error}</Error>}
