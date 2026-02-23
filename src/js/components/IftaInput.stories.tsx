@@ -5,6 +5,9 @@ const meta = {
     component: IftaInput,
     parameters: {
         layout: "centered"
+    },
+    args: {
+        className: "w-[332px]"
     }
 } satisfies Meta<typeof IftaInput>;
 

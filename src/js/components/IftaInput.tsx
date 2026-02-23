@@ -10,6 +10,7 @@ export interface IftaInputProps extends Omit<GlissadeInputProps, "id"> {
 }
 
 export default function IftaInput({
+    className,
     label,
     error: errorProp,
     disabled: disabledProp,
@@ -32,7 +33,7 @@ export default function IftaInput({
     }, [ref])
 
     return (
-        <div className="flex flex-col gap-2">
+        <div className={clsx("flex flex-col gap-2", className)}>
             <div onClick={handleClick} className={clsx(
                 "relative flex flex-col justify-between h-(--input-ifta-height)",
                 "border-(length:--input-border-width) rounded-xl cursor-text placeholder:text-text-100 group",
