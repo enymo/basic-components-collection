@@ -14,12 +14,12 @@ export default function Tabs<T extends string>({
     }[]
 }) {
     return (
-        <nav className="flex flex-row gap-1.5 border-b-2">
+        <nav className="flex flex-row gap-1.5 border-b border-b-neutral-200">
             {tabs.map((tab) => (
-                <button onClick={() => onChange(tab.value)} className={clsx("box-border px-2 pt-2.5 pb-2 body-m-md",
+                <button onClick={() => onChange(tab.value)} className={clsx("box-border border-b-2 border-transparent px-2 pt-2.5 pb-2 body-m-md translate-y-px",
                     {
-                        "text-text-500": tab.value !== value,
-                        "border-b-2 border-b-primary-500 text-primary-500": tab.value === value
+                        "text-text-500 translate-y-px hover:text-text-700": tab.value !== value,
+                        "border-b-2 border-b-primary-500 text-primary-500 translate-y-px": tab.value === value
                     }
                 )}>{tab.label}</button>
             ))}
