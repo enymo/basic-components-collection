@@ -36,13 +36,12 @@ export default function IftaInput({
         <div className={clsx("flex flex-col gap-2", className)}>
             <div onClick={handleClick} className={clsx(
                 "relative flex flex-col justify-between h-(--input-ifta-height)",
-                "border-(length:--input-border-width) rounded-xl cursor-text placeholder:text-text-100 group",
+                "border-(length:--input-border-width) rounded-xl cursor-text placeholder:text-text-100 group shadow-input",
                 {
-                    "bg-bg-100 border-neutral-300 hover:border-neutral-400 focus-within:shadow-primary-300 focus-within:hover:shadow-primary-300 focus-within:border-primary-500 focus-within:hover:border-primary-500": !disabled && error === undefined,
-                    "bg-bg-400 border-neutral-300": disabled,
-                    "border-danger-500": error !== undefined
-                },
-                "shadow-input shadow-neutral-300 w-100"
+                    "bg-bg-100 border-neutral-300 shadow-neutral-300 hover:border-neutral-400 focus-within:shadow-primary-300 focus-within:hover:shadow-primary-300 focus-within:border-primary-500 focus-within:hover:border-primary-500": !disabled && error === undefined,
+                    "bg-bg-400 border-neutral-300 shadow-neutral-300": disabled,
+                    "border-danger-500 shadow-danger-300": error !== undefined
+                }
             )}>
                 <label htmlFor={id} className={clsx(
                     "body-xs-md cursor-text px-(--input-ifta-padding-horizontal) pt-1.5",
