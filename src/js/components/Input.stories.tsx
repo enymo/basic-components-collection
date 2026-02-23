@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import MagnifyingGlassIcon from "../../svg/magnifying-glass-solid-full.svg?react";
 import Input from "./Input";
 
 const meta = {
@@ -53,5 +54,12 @@ export const Select: Story = {
             label: "Choice B",
             value: "choice_b"
         }]
+    }
+}
+
+export const Search: Story = {
+    args: {
+        ...Default.args,
+        prefixIcon: MagnifyingGlassIcon
     }
 }
