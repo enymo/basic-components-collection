@@ -8,19 +8,14 @@ export let Error: Icon;
 export let Spinner: Icon;
 export let Check: Icon;
 
+type IconName = "chevron" | "tooltip" | "error" | "spinner" | "check";
 export function configureIcons({
     chevron,
     tooltip,
     error,
     spinner,
     check
-}: {
-    chevron: Icon,
-    tooltip: Icon,
-    error: Icon,
-    spinner: Icon,
-    check: Icon
-}) {
+}: Record<IconName, Icon>) {
     Chevron = chevron;
     Tooltip = tooltip;
     Error = error;
