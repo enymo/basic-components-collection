@@ -6,3 +6,4 @@ export { default as IftaInput } from "./components/IftaInput";
 export { default as RadioButton } from "./components/RadioButton";
 export { default as RadioInput } from "./components/RadioInput";
 export { default as Tabs } from "./components/Tabs";
+export * from "./icons";
