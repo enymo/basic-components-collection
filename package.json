@@ -1,7 +1,6 @@
 {
-  "name": "basic-components-collection",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@enymo/bcc",
+  "version": "0.1.2",
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
@@ -20,6 +19,12 @@
   "files": [
     "/dist"
   ],
+  "license": "MIT",
+  "author": "enymo GmbH",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enymo/basic-components-collection.git"
+  },
   "scripts": {
     "build": "tsdown",
     "lint": "eslint .",
