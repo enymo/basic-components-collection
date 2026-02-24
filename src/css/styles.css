@@ -99,65 +99,41 @@
     --shadow-input: 0 var(--input-shadow-y) var(--input-shadow-blur) var(--input-shadow-spread) var(--tw-shadow-color);
 }
 
-.body-xs, .body-xs-md {
-    @apply text-xs leading-4.5;
-}
+@layer components {
+    .body-xs, .body-xs-md {
+        @apply text-xs leading-4.5;
+    }
 
-.body-s, .body-s-md {
-    @apply text-sm leading-5;
-}
+    .body-s, .body-s-md {
+        @apply text-sm leading-5;
+    }
 
-.body-m, .body-m-md {
-    @apply text-base leading-5.5;
-}
+    .body-m, .body-m-md {
+        @apply text-base leading-5.5;
+    }
 
-.body-l, .body-l-md {
-    @apply text-lg leading-6;
-}
+    .body-l, .body-l-md {
+        @apply text-lg leading-6;
+    }
 
-.body-xs-md, .body-s-md, .body-m-md, .body-l-md {
-    @apply font-medium;
-}
+    .body-xs-md, .body-s-md, .body-m-md, .body-l-md {
+        @apply font-medium;
+    }
 
-.heading-2xl {
-    @apply text-6xl leading-10 font-semibold;
-}
-
-.heading-xl {
-    @apply text-5xl leading-9 font-semibold;
-}
-
-.heading-l {
-    @apply text-3xl leading-8 font-semibold;
-}
-
-.heading-m {
-    @apply text-2xl leading-7 font-medium;
-}
-
-.heading-s {
-    @apply text-xl leading-6.5 font-medium;
-}
-
-.heading-xs {
-    @apply text-lg leading-6 font-medium;
-}
-
-@media screen(sm) {
     .heading-2xl {
-        @apply text-8xl leading-11.5 font-semibold;
+        @apply text-6xl leading-10 font-semibold;
     }
 
     .heading-xl {
-        @apply text-7xl leading-10 font-semibold;
+        @apply text-5xl leading-9 font-semibold;
     }
 
     .heading-l {
-        @apply text-4xl leading-8 font-semibold;
+        @apply text-3xl leading-8 font-semibold;
     }
 
     .heading-m {
-        @apply text-3xl leading-7 font-medium;
+        @apply text-2xl leading-7 font-medium;
     }
 
     .heading-s {
@@ -166,5 +142,31 @@
 
     .heading-xs {
         @apply text-lg leading-6 font-medium;
+    }
+
+    @media screen(sm) {
+        .heading-2xl {
+            @apply text-8xl leading-11.5 font-semibold;
+        }
+
+        .heading-xl {
+            @apply text-7xl leading-10 font-semibold;
+        }
+
+        .heading-l {
+            @apply text-4xl leading-8 font-semibold;
+        }
+
+        .heading-m {
+            @apply text-3xl leading-7 font-medium;
+        }
+
+        .heading-s {
+            @apply text-xl leading-6.5 font-medium;
+        }
+
+        .heading-xs {
+            @apply text-lg leading-6 font-medium;
+        }
     }
 }
