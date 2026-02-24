@@ -7,5 +7,6 @@ export { default as Input } from "./components/Input";
 export { default as RadioButton } from "./components/RadioButton";
 export { default as RadioInput } from "./components/RadioInput";
 export { default as Tabs } from "./components/Tabs";
+export { default as configureDefaultIcons } from "./defaultIcons";
 export * from "./icons";
 
