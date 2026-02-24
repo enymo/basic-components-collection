@@ -2,7 +2,7 @@ import { Clickable } from "@enymo/react-clickable";
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import { fn } from "storybook/test";
 import { sleep } from "../storybook";
-import { createButton } from "./Button";
+import createButton from "./Button";
 
 const Button = createButton(Clickable);
 const meta = {
