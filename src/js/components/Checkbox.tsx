@@ -13,7 +13,7 @@ export default function Checkbox({
     error?: boolean
 }) {
     return (
-        <div className={clsx("size-5.5 group border-(length:--input-border-width) rounded-sm flex justify-center items-center", {
+        <div className={clsx("size-5.5 group border-(length:--input-border-width) rounded-(--checkbox-border-radius) flex justify-center items-center", {
             "bg-bg-100 fill-white": checked !== true,
             "border-neutral-300": (checked !== true || disabled === true) && !error,
             "peer-checked:bg-primary-500 peer-checked:peer-focus:bg-primary-600": checked === undefined,

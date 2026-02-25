@@ -88,12 +88,10 @@
     --input-shadow-spread: -1px;
     --input-shadow-y: 1px;
 
+    --checkbox-border-radius: 8px;
+
     --input-ifta-padding-horizontal: 16px;
     --input-ifta-height: 56px;
-
-    --radius-sm: 8px;
-    --radius-md: 12px;
-    --radius-lg: 16px;
 
     --shadow-button: 0 var(--button-shadow-y) var(--button-shadow-blur) var(--button-shadow-spread) var(--tw-shadow-color);
     --shadow-input: 0 var(--input-shadow-y) var(--input-shadow-blur) var(--input-shadow-spread) var(--tw-shadow-color);
