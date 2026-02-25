@@ -1,10 +1,11 @@
 import { GlissadeInput, useGlissadeInput, type GlissadeInputProps } from "@enymo/glissade";
 import clsx from "clsx";
-import { useId, type FC, type ReactNode, type SVGProps } from "react";
+import { useCallback, useId, type FC, type KeyboardEventHandler, type ReactNode, type SVGProps } from "react";
 import { Chevron } from "../icons";
 import { InputFrame, type InputFrameProps } from "./InputFrame";
 
 export interface InputProps extends Omit<InputFrameProps, "children" | "id">, Omit<GlissadeInputProps, "id"> {
+    onSearch?: (value: string) => void,
     innerClassName?: string,
     prefixIcon?: FC<SVGProps<SVGSVGElement>>,
     prefix?: ReactNode,
@@ -13,6 +14,7 @@ export interface InputProps extends Omit<InputFrameProps, "children" | "id">, Om
 
 export default function Input({
     className,
+    onSearch,
     innerClassName,
     inputClassName,
     textareaClassName,
@@ -28,12 +30,18 @@ export default function Input({
     const id = useId();
     const {error, ...glissade} = useGlissadeInput({name, error: errorProp, disabled});
 
+    const handleKeyDown = useCallback<KeyboardEventHandler<HTMLInputElement>>(e => {
+        if (e.key === "Enter") {
+            onSearch?.(e.currentTarget.value);
+        }
+    }, [onSearch])
+
     return (
         <InputFrame className={className} id={id} error={error} {...props}>
             <div className="flex">
                 {prefix}
                 <div className="relative">
-                    <GlissadeInput className={clsx(
+                    <GlissadeInput onKeyDown={handleKeyDown} className={clsx(
                         "px-(--input-padding-horizontal) rounded-(--input-radius) border-(length:--input-border-width) outline-none body-m",
                         "text-text-900 bg-bg-100 placeholder:text-text-100 disabled:bg-bg-400 disabled:text-text-500",
                         error === undefined ? "hover:border-neutral-400 focus:border-primary-500 focus:hover:border-primary-500 border-neutral-300" : "border-danger-500",
