@@ -13,7 +13,7 @@ export interface InputFrameProps {
     children: ReactNode
 }
 
-export function InputFrame({
+export default function InputFrame({
     className,
     id,
     label,

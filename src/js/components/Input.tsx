@@ -2,7 +2,7 @@ import { GlissadeInput, useGlissadeInput, type GlissadeInputProps } from "@enymo
 import clsx from "clsx";
 import { useCallback, useId, type FC, type KeyboardEventHandler, type ReactNode, type SVGProps } from "react";
 import { Chevron } from "../icons";
-import { InputFrame, type InputFrameProps } from "./InputFrame";
+import InputFrame, { type InputFrameProps } from "./InputFrame";
 
 export interface InputProps extends Omit<InputFrameProps, "children" | "id">, Omit<GlissadeInputProps, "id"> {
     onSearch?: (value: string) => void,
