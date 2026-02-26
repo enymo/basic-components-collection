@@ -24,6 +24,16 @@
     --color-primary-800: #0E1F58;
     --color-primary-900: #091439;
 
+    --color-secondary-100: var(--color-neutral-100);
+    --color-secondary-200: var(--color-neutral-200);
+    --color-secondary-300: var(--color-neutral-300);
+    --color-secondary-400: var(--color-neutral-400);
+    --color-secondary-500: var(--color-neutral-500);
+    --color-secondary-600: var(--color-neutral-600);
+    --color-secondary-700: var(--color-neutral-700);
+    --color-secondary-800: var(--color-neutral-800);
+    --color-secondary-900: var(--color-neutral-900);
+
     --color-bg-100: #FFFFFF;
     --color-bg-200: #FEFEFF;
     --color-bg-300: #FCFCFD;
@@ -58,7 +68,7 @@
     --color-success-100: #B2E4C5;
     --color-success-300: #63D994;
     --color-success-500: #48D382;
-    
+
     --color-warning-100: #FFD7BF;
     --color-warning-300: #FFA773;
     --color-warning-500: #FE8B56;
@@ -98,23 +108,31 @@
 }
 
 @layer components {
-    .body-xs, .body-xs-md {
+
+    .body-xs,
+    .body-xs-md {
         @apply text-xs leading-4.5;
     }
 
-    .body-s, .body-s-md {
+    .body-s,
+    .body-s-md {
         @apply text-sm leading-5;
     }
 
-    .body-m, .body-m-md {
+    .body-m,
+    .body-m-md {
         @apply text-base leading-5.5;
     }
 
-    .body-l, .body-l-md {
+    .body-l,
+    .body-l-md {
         @apply text-lg leading-6;
     }
 
-    .body-xs-md, .body-s-md, .body-m-md, .body-l-md {
+    .body-xs-md,
+    .body-s-md,
+    .body-m-md,
+    .body-l-md {
         @apply font-medium;
     }
 

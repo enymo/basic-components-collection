@@ -42,7 +42,7 @@ const createButton = <T extends ClickableProps>(Clickable: FC<T>) => (props: But
                 "flex-row": iconPosition === "before",
                 "flex-row-reverse": iconPosition === "after",
                 "border-(length:--button-border-width) text-white fill-white bg-primary-500 border-primary-400 hover:bg-primary-600 hover:border-primary-500 disabled:bg-neutral-300 disabled:border-neutral-300": variant === "primary",
-                "border-(length:--button-border-width) text-white fill-white bg-neutral-700 border-neutral-600 hover:bg-neutral-800 hover:border-neutral-700 disabled:bg-neutral-300 disabled:border-neutral-300": variant === "secondary",
+                "border-(length:--button-border-width) text-white fill-white bg-secondary-700 border-secondary-600 hover:bg-secondary-800 hover:border-secondary-700 disabled:bg-secondary-300 disabled:border-secondary-300": variant === "secondary",
                 "text-text-700 fill-text-700 hover:text-text-900 hover:fill-text-900 disabled:text-text-100 disabled:fill-text-100": variant === "tertiary",
                 "border-(length:--button-border-width) text-primary-500 border-primary-500 fill-primary-500 hover:text-primary-600 hover:border-primary-600 hover:bg-primary-100 hover:fill-primary-600 disabled:border-neutral-300 disabled:text-text-100 disabled:fill-text-100": variant === "ghost",
                 "border-(length:--button-border-width) text-white fill-white bg-danger-500 border-danger-400 hover:bg-danger-600 hover:border-danger-500 disabled:bg-neutral-300 disabled:border-neutral-300": variant === "danger"
