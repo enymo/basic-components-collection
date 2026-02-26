@@ -43,3 +43,10 @@ export const Ghost: Story = {
         variant: "ghost"
     }
 }
+
+export const Danger: Story = {
+    args: {
+        ...Primary.args,
+        variant: "danger"
+    }
+}
