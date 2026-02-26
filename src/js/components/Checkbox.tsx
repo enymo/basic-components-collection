@@ -14,11 +14,11 @@ export default function Checkbox({
 }) {
     return (
         <div className={clsx("size-5.5 group border-(length:--input-border-width) rounded-(--checkbox-border-radius) flex justify-center items-center", {
-            "bg-bg-100 fill-white": checked !== true,
+            "bg-bg-100 fill-neutral-000": checked !== true,
             "border-neutral-300": (checked !== true || disabled === true) && !error,
             "peer-checked:bg-primary-500 peer-checked:peer-focus:bg-primary-600": checked === undefined,
             "peer-checked:border-primary-400": checked === undefined && !error,
-            "bg-primary-500 peer-focus:bg-primary-600 fill-white": checked === true && disabled !== true,
+            "bg-primary-500 peer-focus:bg-primary-600 fill-neutral-000": checked === true && disabled !== true,
             "border-primary-400": checked === true && disabled !== true && !error,
             "peer-focus:border-primary-300": checked !== true && disabled !== true && !error,
             "bg-bg-400 fill-neutral-400": disabled === true,
