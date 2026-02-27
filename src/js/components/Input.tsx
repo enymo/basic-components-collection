@@ -40,7 +40,7 @@ export default function Input({
         <InputFrame className={className} id={id} error={error} {...props}>
             <div className="flex">
                 {prefix}
-                <div className="relative">
+                <div className="relative flex-1">
                     <GlissadeInput onKeyDown={handleKeyDown} className={clsx(
                         "px-(--input-padding-horizontal) rounded-(--input-radius) border-(length:--input-border-width) outline-none body-m",
                         "text-text-900 bg-bg-100 placeholder:text-text-100 disabled:bg-bg-400 disabled:text-text-500",
