@@ -58,7 +58,7 @@ export default function Input({
                     )} selectClassName={clsx(
                         "peer h-(--input-height) pr-[calc(var(--spacing)*5.5+var(--input-padding-horizontal))] appearance-none",
                         selectClassName
-                    )} id={id} {...props} {...glissade} />
+                    )} id={id} name={name} {...props} {...glissade} />
                     {PrefixIcon && <PrefixIcon className="size-4 fill-neutral-700 absolute top-1/2 -translate-y-1/2 left-(--input-padding-horizontal)" />}
                     {props.type === "select" && <Chevron className="size-4 absolute top-1/2 -translate-y-1/2 right-(--input-padding-horizontal) fill-neutral-700 transition-transform peer-open:rotate-180" />}
                 </div>
