@@ -1,4 +1,4 @@
-export { default as createButton } from "./components/Button";
+export { default as createButton, type ButtonProps, type ClickableProps } from "./components/Button";
 export { default as Checkbox } from "./components/Checkbox";
 export { default as CheckboxInput } from "./components/CheckboxInput";
 export { default as Error } from "./components/Error";

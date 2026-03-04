@@ -11,7 +11,7 @@ export default function Error({
 }) {
     return (
         <div className={clsx("flex items-center gap-1 body-xs fill-danger-500 text-danger-500", className)}>
-            <ErrorIcon className="size-3" />
+            <ErrorIcon className="size-4" />
             {children}
         </div>
     )
