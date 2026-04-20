@@ -4,7 +4,7 @@ import { useCallback, useId, type FC, type KeyboardEventHandler, type ReactNode,
 import { Chevron } from "../icons";
 import InputFrame, { type InputFrameProps } from "./InputFrame";
 
-export interface InputProps extends Omit<InputFrameProps, "children" | "id">, Omit<GlissadeInputProps, "id"> {
+export interface InputProps<T extends string = string> extends Omit<InputFrameProps, "children" | "id">, Omit<GlissadeInputProps<T>, "id"> {
     onSearch?: (value: string) => void,
     innerClassName?: string,
     prefixIcon?: FC<SVGProps<SVGSVGElement>>,
@@ -12,7 +12,7 @@ export interface InputProps extends Omit<InputFrameProps, "children" | "id">, Om
     postfix?: ReactNode
 }
 
-export default function Input({
+export default function Input<T extends string = string>({
     className,
     onSearch,
     innerClassName,
@@ -26,7 +26,7 @@ export default function Input({
     prefix,
     postfix,
     ...props
-}: InputProps) {
+}: InputProps<T>) {
     const id = useId();
     const {error, ...glissade} = useGlissadeInput({name, error: errorProp, disabled});
 
