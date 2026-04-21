@@ -8,7 +8,7 @@ export interface ClickableProps {
     onClick?: (...args: any[]) => void,
     disabled?: boolean,
     submit?: boolean,
-    children: ReactNode
+    children?: ReactNode
 }
 
 export interface ButtonProps {
