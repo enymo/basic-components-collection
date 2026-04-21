@@ -5,7 +5,7 @@ import { Spinner, type Icon } from "../icons";
 
 export interface ClickableProps {
     className?: string,
-    onClick?: () => void,
+    onClick?: (...args: any[]) => void,
     disabled?: boolean,
     submit?: boolean,
     children: ReactNode
