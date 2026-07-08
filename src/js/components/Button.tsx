@@ -16,6 +16,7 @@ export interface ButtonProps {
     variant: "primary" | "secondary" | "tertiary" | "ghost" | "danger",
     icon?: Icon,
     iconPosition?: "before" | "after",
+    iconSize?: number,
     loading?: boolean
 }
 
@@ -26,6 +27,7 @@ const createButton = <T extends ClickableProps>(Clickable: FC<T>) => (props: But
         variant,
         icon: Icon,
         iconPosition,
+        iconSize = 3,
         disabled,
         onClick,
         submit,
@@ -46,12 +48,15 @@ const createButton = <T extends ClickableProps>(Clickable: FC<T>) => (props: But
                 "border-(length:--button-border-width) shadow-button text-button-danger-text fill-button-danger-text bg-button-danger-bg border-button-danger-border shadow-button-danger-shadow hover:bg-button-danger-hover-bg hover:border-button-danger-hover-border hover:text-button-danger-hover-text hover:fill-button-danger-hover-text hover:shadow-button-danger-hover-shadow disabled:bg-button-danger-disabled-bg disabled:border-button-danger-disabled-border disabled:text-button-danger-disabled-text disabled:fill-button-danger-disabled-text": variant === "danger"
             }, className)}
         >
-            <div className={clsx("size-full flex items-center justify-center", {
+            <div className={clsx("size-full flex gap-1.5 items-center justify-center", {
                 "invisible": loading,
                 "flex-row": iconPosition === "before",
                 "flex-row-reverse": iconPosition === "after"
             }, innerClassName)}>
-                {Icon && <Icon className="size-3" />}
+                {Icon && <Icon style={{
+                    width: `calc(var(--spacing) * ${iconSize})`,
+                    height: `calc(var(--spacing) * ${iconSize})`
+                }} />}
                 {children}
             </div>
             {loading && (
