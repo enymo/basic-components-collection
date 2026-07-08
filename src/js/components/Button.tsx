@@ -39,8 +39,6 @@ const createButton = <T extends ClickableProps>(Clickable: FC<T>) => (props: But
             {...props}
             {...glissade}
             className={clsx("relative cursor-pointer disabled:cursor-not-allowed body-m-md h-(--button-height) rounded-(--button-radius) px-(--button-padding-horizontal)", {
-                "flex-row": iconPosition === "before",
-                "flex-row-reverse": iconPosition === "after",
                 "border-(length:--button-border-width) shadow-button text-button-primary-text fill-button-primary-text bg-button-primary-bg border-button-primary-border shadow-button-primary-shadow hover:bg-button-primary-hover-bg hover:border-button-primary-hover-border hover:shadow-button-primary-hover-shadow hover:text-button-primary-hover-text hover:fill-button-primary-hover-text disabled:bg-button-primary-disabled-bg disabled:border-button-primary-disabled-border disabled:text-button-primary-disabled-text disabled:fill-button-primary-disabled-text": variant === "primary",
                 "border-(length:--button-border-width) shadow-button text-button-secondary-text fill-button-secondary-text bg-button-secondary-bg border-button-secondary-border shadow-button-secondary-shadow hover:bg-button-secondary-hover-bg hover:border-button-secondary-hover-border hover:shadow-button-secondary-hover-shadow hover:text-button-secondary-hover-text hover:fill-button-secondary-hover-text disabled:bg-button-secondary-disabled-bg disabled:border-button-secondary-disabled-border disabled:text-button-secondary-disabled-text disabled:fill-button-secondary-disabled-text": variant === "secondary",
                 "text-button-tertiary-text fill-button-tertiary-text hover:text-button-tertiary-hover-text hover:fill-button-tertiary-hover-text disabled:text-button-tertiary-disabled-text disabled:fill-button-tertiary-disabled-text": variant === "tertiary",
@@ -48,7 +46,11 @@ const createButton = <T extends ClickableProps>(Clickable: FC<T>) => (props: But
                 "border-(length:--button-border-width) shadow-button text-button-danger-text fill-button-danger-text bg-button-danger-bg border-button-danger-border shadow-button-danger-shadow hover:bg-button-danger-hover-bg hover:border-button-danger-hover-border hover:text-button-danger-hover-text hover:fill-button-danger-hover-text hover:shadow-button-danger-hover-shadow disabled:bg-button-danger-disabled-bg disabled:border-button-danger-disabled-border disabled:text-button-danger-disabled-text disabled:fill-button-danger-disabled-text": variant === "danger"
             }, className)}
         >
-            <div className={clsx("size-full flex items-center justify-center", { "invisible": loading }, innerClassName)}>
+            <div className={clsx("size-full flex items-center justify-center", {
+                "invisible": loading,
+                "flex-row": iconPosition === "before",
+                "flex-row-reverse": iconPosition === "after"
+            }, innerClassName)}>
                 {Icon && <Icon className="size-3" />}
                 {children}
             </div>
