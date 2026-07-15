@@ -2,10 +2,12 @@ import clsx from "clsx"
 import type { ReactNode } from "react"
 
 export default function Tabs<T extends string>({
+    className,
     value,
     onChange,
     tabs
 }: {
+    className?: string,
     value: T,
     onChange: (value: T) => void,
     tabs: {
@@ -14,7 +16,7 @@ export default function Tabs<T extends string>({
     }[]
 }) {
     return (
-        <nav className="flex flex-row gap-1.5 border-b border-b-neutral-200">
+        <nav className={clsx("flex flex-row gap-1.5 border-b border-b-neutral-200", className)}>
             {tabs.map((tab) => (
                 <button type="button" onClick={() => onChange(tab.value)} className={clsx("box-border border-b-2 border-transparent px-2 pt-2.5 pb-2 body-m-md translate-y-px",
                     {
@@ -23,6 +25,6 @@ export default function Tabs<T extends string>({
                     }
                 )}>{tab.label}</button>
             ))}
-        </nav >
+        </nav>
     )
 }
