@@ -3,6 +3,8 @@ import clsx from "clsx";
 import type { FC, ReactNode } from "react";
 import { Spinner, type Icon } from "../icons";
 
+export type ButtonVariant = "primary" | "secondary" | "tertiary" | "ghost" | "danger";
+
 export interface ClickableProps {
     className?: string,
     onClick?: (...args: any[]) => void,
@@ -13,7 +15,7 @@ export interface ClickableProps {
 
 export interface ButtonProps {
     innerClassName?: string,
-    variant: "primary" | "secondary" | "tertiary" | "ghost" | "danger",
+    variant: ButtonVariant,
     icon?: Icon,
     iconPosition?: "before" | "after",
     iconSize?: number,
