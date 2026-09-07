@@ -10,12 +10,13 @@ export default function Error({
     className?: string,
     children?: ReactNode
 }) {
-    const error = useError();
+    const contextError = useError();
+    const error = children !== undefined ? children : contextError;
 
-    return (
+    return error && (
         <div className={clsx("flex items-center gap-1 body-xs fill-danger-500 text-danger-500", className)}>
             <ErrorIcon className="size-4" />
-            {children !== undefined ? children : error}
+            {children !== undefined ? children : contextError}
         </div>
     )
 }
