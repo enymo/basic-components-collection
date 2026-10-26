@@ -2,6 +2,7 @@ import useOnClickOutside from "@enymo/react-click-outside-hook";
 import useHybridInput from "@enymo/react-hybrid-input-hook";
 import clsx from "clsx";
 import { useCallback, useEffect, useId, useRef, useState, type ChangeEventHandler } from "react";
+import { type RegisterOptions } from "react-hook-form";
 import { useBc } from "../context/BasicComponentsContext";
 import { Chevron, MagnifyingGlass } from "../icons";
 import type { InputFrameProps } from "./InputFrame";
@@ -13,6 +14,8 @@ export interface Choice<T extends string | number> {
 }
 
 export interface AutocompleteInputProps<T extends string | number> extends Omit<InputFrameProps, 'children' | 'id'> {
+    name?: string,
+    options?: RegisterOptions,
     value?: Choice<T> | null,
     debounceDelay?: number,
     onChange?: (value: Choice<T> | null) => void,
@@ -26,6 +29,8 @@ export interface AutocompleteInputProps<T extends string | number> extends Omit<
 }
 
 export function AutoCompleteInput<T extends string | number>({
+    name,
+    options,
     value: externalValue,
     onChange: externalOnChange,
     error: externalError,
@@ -41,7 +46,7 @@ export function AutoCompleteInput<T extends string | number>({
 }: AutocompleteInputProps<T>) {
     const id = useId();
     const t = useBc();
-    const {value, onChange, error} = useHybridInput({externalValue, externalOnChange, externalError, defaultValue: null});
+    const {value, onChange, error} = useHybridInput({name, externalValue, externalOnChange, externalError, options, defaultValue: null});
     
     const [open, setOpen] = useState(false);
     const searchTimeout = useRef<NodeJS.Timeout>(undefined);
