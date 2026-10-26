@@ -130,7 +130,7 @@ export function AutoCompleteInput<T extends string | number>({
                 />
                 <div className={clsx(
                     open ? "flex" : "hidden",
-                    "absolute inset-x-0 top-[calc(100%+var(--spacing)*1)] rounded-md shadow-dropdown flex-col",
+                    "absolute inset-x-0 top-[calc(100%+var(--spacing)*1)] rounded-md shadow-dropdown flex-col bg-bg-100 z-10",
                     searching || choices.length === 0 ? "py-6 items-center gap-4" : "py-2.5"
                 )}>
                     {searching || choices.length === 0 ? <>
