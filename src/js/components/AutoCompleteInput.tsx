@@ -156,7 +156,7 @@ export function AutoCompleteInput<T extends string | number>({
                     "flex-1 justify-between items-center h-(--input-height) px-(--input-padding-horizontal) rounded-(--input-radius) border-(length:--input-border-width) body-m outline-none",
                     "disabled:bg-bg-400",
                     value !== null ? "text-text-900 disabled:text-text-500" : "text-text-100",
-                    error === undefined ? "hover:border-neutral-400 border-neutral-300 focus:border-primary-400" : "border-danger-500"
+                    error === undefined ? "hover:border-neutral-400 border-neutral-300 disabled:border-neutral-300 focus:border-primary-400" : "border-danger-500"
                 )}>
                     {value?.label ?? placeholder ?? t('autoCompleteInput.placeholder')}
                     <Chevron className="size-4 fill-neutral-700" />

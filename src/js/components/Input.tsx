@@ -45,7 +45,7 @@ export function Input<T extends string = string>({
                     <GlissadeInput ref={ref} onKeyDown={handleKeyDown} className={clsx(
                         "flex-1 px-(--input-padding-horizontal) rounded-(--input-radius) border-(length:--input-border-width) outline-none body-m",
                         "text-text-900 bg-bg-100 placeholder:text-text-100 disabled:bg-bg-400 disabled:text-text-500",
-                        error === undefined ? "hover:border-neutral-400 focus:border-primary-400 border-neutral-300" : "border-danger-500",
+                        error === undefined ? "hover:border-neutral-400 focus:border-primary-400 border-neutral-300 disabled:border-neutral-300" : "border-danger-500",
                         {
                             "pl-[calc(var(--spacing)*6+var(--input-padding-horizontal))]": PrefixIcon !== undefined
                         },
