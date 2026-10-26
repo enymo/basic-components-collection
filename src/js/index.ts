@@ -1,3 +1,4 @@
+export * from "./components/AutoCompleteInput";
 export * from "./components/Button";
 export * from "./components/Checkbox";
 export * from "./components/CheckboxInput";
@@ -10,4 +11,3 @@ export * from "./components/RadioInput";
 export * from "./components/Tabs";
 export { BasicComponentsProvider, type TFunction } from "./context/BasicComponentsContext";
 export * from "./icons";
-
