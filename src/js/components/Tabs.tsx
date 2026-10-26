@@ -1,7 +1,7 @@
 import clsx from "clsx"
 import type { ReactNode } from "react"
 
-export default function Tabs<T extends string>({
+export function Tabs<T extends string>({
     className,
     value,
     onChange,

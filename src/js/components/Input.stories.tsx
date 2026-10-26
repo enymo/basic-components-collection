@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import MagnifyingGlassIcon from "../../svg/magnifying-glass-solid-full.svg?react";
-import Input from "./Input";
+import { MagnifyingGlass } from "../icons";
+import { Input } from "./Input";
 
 const meta = {
     component: Input,
@@ -60,6 +60,6 @@ export const Select: Story = {
 export const Search: Story = {
     args: {
         ...Default.args,
-        prefixIcon: MagnifyingGlassIcon
+        prefixIcon: MagnifyingGlass
     }
 }

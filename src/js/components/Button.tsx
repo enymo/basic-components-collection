@@ -22,7 +22,7 @@ export interface ButtonProps {
     loading?: boolean
 }
 
-const createButton = <T extends ClickableProps>(Clickable: FC<T>) => (props: ButtonProps & T) => {
+export const createButton = <T extends ClickableProps>(Clickable: FC<T>) => (props: ButtonProps & T) => {
     const {
         className,
         innerClassName,
@@ -69,5 +69,3 @@ const createButton = <T extends ClickableProps>(Clickable: FC<T>) => (props: But
         </Clickable>
     )
 }
-
-export default createButton;

@@ -1,7 +1,7 @@
 import clsx from "clsx"
 import { Check } from "../icons"
 
-export default function Checkbox({
+export function Checkbox({
     className,
     disabled,
     checked,

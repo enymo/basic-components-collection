@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import CheckboxInput from "./CheckboxInput";
+import { CheckboxInput } from "./CheckboxInput";
 
 const meta = {
     component: CheckboxInput,

@@ -1,9 +1,9 @@
 import { useError } from "@enymo/glissade";
 import clsx from "clsx";
 import type { ReactNode } from "react";
-import { Error as ErrorIcon } from "../icons";
+import { ErrorIcon } from "../icons";
 
-export default function Error({
+export function Error({
     className,
     children
 }: {

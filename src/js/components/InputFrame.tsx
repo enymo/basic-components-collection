@@ -1,9 +1,10 @@
 import clsx from "clsx";
-import type { ReactNode } from "react";
+import type { ReactNode, Ref } from "react";
 import { Tooltip } from "../icons";
-import Error from "./Error";
+import { Error } from "./Error";
 
 export interface InputFrameProps {
+    ref?: Ref<HTMLDivElement>,
     className?: string,
     id?: string,
     label?: ReactNode,
@@ -13,7 +14,8 @@ export interface InputFrameProps {
     children: ReactNode
 }
 
-export default function InputFrame({
+export function InputFrame({
+    ref,
     className,
     id,
     label,
@@ -23,7 +25,7 @@ export default function InputFrame({
     children
 }: InputFrameProps) {
     return (
-        <div className={clsx("flex flex-col gap-1.5", className)}>
+        <div ref={ref} className={clsx("flex flex-col gap-1.5", className)}>
             {label && (
                 <div className="flex gap-1 items-center">
                     <label htmlFor={id} className="body-s-md text-text-900">{label}</label>

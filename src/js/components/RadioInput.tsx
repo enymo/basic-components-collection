@@ -1,15 +1,15 @@
 import { useGlissadeChoice, type GlissadeChoiceProps } from "@enymo/glissade";
 import clsx from "clsx";
 import type { ReactNode } from "react";
-import Error from "./Error";
-import RadioButton from "./RadioButton";
+import { Error } from "./Error";
+import { RadioButton } from "./RadioButton";
 
 export interface RadioProps extends GlissadeChoiceProps {
     className?: string,
     children?: ReactNode
 }
 
-export default function RadioInput({
+export function RadioInput({
     className,
     children,
     ...props

@@ -1,15 +1,15 @@
 import { useGlissadeChoice, type GlissadeChoiceProps } from "@enymo/glissade";
 import clsx from "clsx";
 import type { ReactNode } from "react";
-import Checkbox from "./Checkbox";
-import Error from "./Error";
+import { Checkbox } from "./Checkbox";
+import { Error } from "./Error";
 
 export interface CheckboxInputProps extends GlissadeChoiceProps {
     className?: string,
     children?: ReactNode
 }
 
-export default function CheckboxInput({
+export function CheckboxInput({
     className,
     children,
     ...props

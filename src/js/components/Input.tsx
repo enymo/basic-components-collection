@@ -2,9 +2,9 @@ import { GlissadeInput, useGlissadeInput, type GlissadeInputProps } from "@enymo
 import clsx from "clsx";
 import { useCallback, useId, type FC, type KeyboardEventHandler, type ReactNode, type SVGProps } from "react";
 import { Chevron } from "../icons";
-import InputFrame, { type InputFrameProps } from "./InputFrame";
+import { InputFrame, type InputFrameProps } from "./InputFrame";
 
-export interface InputProps<T extends string = string> extends Omit<InputFrameProps, "children" | "id">, Omit<GlissadeInputProps<T>, "id"> {
+export interface InputProps<T extends string = string> extends Omit<InputFrameProps, "children" | "id" | "ref">, Omit<GlissadeInputProps<T>, "id"> {
     onSearch?: (value: string) => void,
     innerClassName?: string,
     prefixIcon?: FC<SVGProps<SVGSVGElement>>,
@@ -12,7 +12,8 @@ export interface InputProps<T extends string = string> extends Omit<InputFramePr
     postfix?: ReactNode
 }
 
-export default function Input<T extends string = string>({
+export function Input<T extends string = string>({
+    ref,
     className,
     onSearch,
     innerClassName,
@@ -41,10 +42,10 @@ export default function Input<T extends string = string>({
             <div className="flex">
                 {prefix}
                 <div className="flex relative flex-1">
-                    <GlissadeInput onKeyDown={handleKeyDown} className={clsx(
+                    <GlissadeInput ref={ref} onKeyDown={handleKeyDown} className={clsx(
                         "flex-1 px-(--input-padding-horizontal) rounded-(--input-radius) border-(length:--input-border-width) outline-none body-m",
                         "text-text-900 bg-bg-100 placeholder:text-text-100 disabled:bg-bg-400 disabled:text-text-500",
-                        error === undefined ? "hover:border-neutral-400 focus:border-primary-500 focus:hover:border-primary-500 border-neutral-300" : "border-danger-500",
+                        error === undefined ? "hover:border-neutral-400 focus:border-primary-400 border-neutral-300" : "border-danger-500",
                         {
                             "pl-[calc(var(--spacing)*6+var(--input-padding-horizontal))]": PrefixIcon !== undefined
                         },

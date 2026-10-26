@@ -2,14 +2,14 @@ import { GlissadeInput, useGlissadeInput, type GlissadeInputProps, type Glissade
 import clsx from "clsx";
 import { useCallback, useId, useRef } from "react";
 import { Chevron } from "../icons";
-import Error from "./Error";
+import { Error } from "./Error";
 
 export interface IftaInputProps extends Omit<GlissadeInputProps, "id"> {
     label: string,
     error?: string
 }
 
-export default function IftaInput({
+export function IftaInput({
     className,
     label,
     error: errorProp,

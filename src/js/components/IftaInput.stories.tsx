@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
-import IftaInput from "./IftaInput";
+import { IftaInput } from "./IftaInput";
 
 const meta = {
     component: IftaInput,

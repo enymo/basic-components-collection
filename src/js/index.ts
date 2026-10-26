@@ -1,12 +1,13 @@
-export { default as createButton, type ButtonProps, type ButtonVariant, type ClickableProps } from "./components/Button";
-export { default as Checkbox } from "./components/Checkbox";
-export { default as CheckboxInput } from "./components/CheckboxInput";
-export { default as Error } from "./components/Error";
-export { default as IftaInput } from "./components/IftaInput";
-export { default as Input, type InputProps } from "./components/Input";
-export { default as InputFrame } from "./components/InputFrame";
-export { default as RadioButton } from "./components/RadioButton";
-export { default as RadioInput } from "./components/RadioInput";
-export { default as Tabs } from "./components/Tabs";
+export * from "./components/Button";
+export * from "./components/Checkbox";
+export * from "./components/CheckboxInput";
+export * from "./components/Error";
+export * from "./components/IftaInput";
+export * from "./components/Input";
+export * from "./components/InputFrame";
+export * from "./components/RadioButton";
+export * from "./components/RadioInput";
+export * from "./components/Tabs";
+export { BasicComponentsProvider, type TFunction } from "./context/BasicComponentsContext";
 export * from "./icons";
 

@@ -8,22 +8,24 @@ export type Icon = FC<SVGProps<SVGSVGElement>>;
 
 export let Chevron: Icon = missingIcons;
 export let Tooltip: Icon = missingIcons;
-let ErrorIcon: Icon = missingIcons;
-export { ErrorIcon as Error };
+export let ErrorIcon: Icon = missingIcons;
 export let Spinner: Icon = missingIcons;
 export let Check: Icon = missingIcons;
+export let MagnifyingGlass: Icon = missingIcons;
 
-type IconName = "chevron" | "tooltip" | "error" | "spinner" | "check";
+type IconName = "chevron" | "tooltip" | "error" | "spinner" | "check" | "magnifyingGlass";
 export function configureIcons({
     chevron,
     tooltip,
     error,
     spinner,
-    check
+    check,
+    magnifyingGlass
 }: Record<IconName, Icon>) {
     Chevron = chevron;
     Tooltip = tooltip;
     ErrorIcon = error;
     Spinner = spinner;
     Check = check;
+    MagnifyingGlass = magnifyingGlass;
 }

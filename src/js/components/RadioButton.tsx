@@ -1,6 +1,6 @@
 import clsx from "clsx"
 
-export default function RadioButton({
+export function RadioButton({
     className,
     disabled,
     selected,
