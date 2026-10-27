@@ -1,4 +1,5 @@
 import useOnClickOutside from "@enymo/react-click-outside-hook";
+import { useDisabled } from "@enymo/react-form-component";
 import useHybridInput from "@enymo/react-hybrid-input-hook";
 import clsx from "clsx";
 import { useCallback, useEffect, useId, useRef, useState, type ChangeEventHandler } from "react";
@@ -40,13 +41,15 @@ export function AutoCompleteInput<T extends string | number>({
     searchLabel,
     searchingLabel,
     noResultsLabel,
-    disabled,
+    disabled: disabledProp,
     debounceDelay = 300,
     ...props
 }: AutocompleteInputProps<T>) {
     const id = useId();
     const t = useBc();
     const {value, onChange, error} = useHybridInput({name, externalValue, externalOnChange, externalError, options, defaultValue: null});
+    const disabledContext = useDisabled();
+    const disabled = disabledProp ?? disabledContext ?? false;
     
     const [open, setOpen] = useState(false);
     const searchTimeout = useRef<NodeJS.Timeout>(undefined);
