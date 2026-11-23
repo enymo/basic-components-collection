@@ -9,5 +9,6 @@ export * from "./components/InputFrame";
 export * from "./components/RadioButton";
 export * from "./components/RadioInput";
 export * from "./components/Tabs";
+export * from "./components/Tooltip";
 export { BasicComponentsProvider, type TFunction } from "./context/BasicComponentsContext";
 export * from "./icons";
