@@ -53,7 +53,7 @@ export function Tooltip({
             <div className="w-40 flex justify-center absolute left-1/2 -translate-x-1/2 pointer-events-none opacity-0 transition-opacity duration-200 group-hover:opacity-100" style={{
                 [bottom ? 'top' : 'bottom']: style
             }}>
-                <div ref={ref} className="rounded-sm body-xs text-text-900 text-center p-1.5 shadow-dropdown bg-bg-100" style={{
+                <div ref={ref} className="shrink rounded-sm body-xs text-text-900 text-center p-1.5 shadow-dropdown bg-bg-100" style={{
                     transform: `translateX(${translateX}px)`
                 }}>
                     {tooltip}
