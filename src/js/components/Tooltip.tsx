@@ -3,7 +3,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 
 const edgePadding = 8;
 
-export default function Tooltip({
+export function Tooltip({
     className,
     padding = 0,
     tooltip,

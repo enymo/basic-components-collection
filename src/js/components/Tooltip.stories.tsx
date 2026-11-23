@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 import CircleQuestion from "../../svg/circle-question-regular-full.svg?react";
-import Tooltip from "./Tooltip";
+import { Tooltip } from "./Tooltip";
 
 const meta = {
     component: Tooltip,
