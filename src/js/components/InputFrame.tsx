@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import type { ReactNode, Ref } from "react";
-import { Tooltip } from "../icons";
+import { TooltipIcon } from "../icons";
 import { Error } from "./Error";
 
 export interface InputFrameProps {
@@ -31,7 +31,7 @@ export function InputFrame({
                     <label htmlFor={id} className="body-s-md text-text-900">{label}</label>
                     {tooltip && (
                         <div title={tooltip}>
-                            <Tooltip className="size-4 fill-neutral-600" />
+                            <TooltipIcon className="size-4 fill-neutral-600" />
                         </div>
                     )}
                 </div>

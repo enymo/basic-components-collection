@@ -7,7 +7,7 @@ const missingIcons = () => {
 export type Icon = FC<SVGProps<SVGSVGElement>>;
 
 export let Chevron: Icon = missingIcons;
-export let Tooltip: Icon = missingIcons;
+export let TooltipIcon: Icon = missingIcons;
 export let ErrorIcon: Icon = missingIcons;
 export let Spinner: Icon = missingIcons;
 export let Check: Icon = missingIcons;
@@ -23,7 +23,7 @@ export function configureIcons({
     magnifyingGlass
 }: Record<IconName, Icon>) {
     Chevron = chevron;
-    Tooltip = tooltip;
+    TooltipIcon = tooltip;
     ErrorIcon = error;
     Spinner = spinner;
     Check = check;
