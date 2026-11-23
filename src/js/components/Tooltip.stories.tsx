@@ -5,13 +5,8 @@ import Tooltip from "./Tooltip";
 const meta = {
     component: Tooltip,
     parameters: {
-        layout: "fullscreen"
-    },
-    decorators: [Story => (
-        <div className="h-svh flex flex-col items-end justify-start overflow-hidden">
-            <Story />
-        </div>
-    )]
+        layout: "centered"
+    }
 } satisfies Meta<typeof Tooltip>;
 
 export default meta;
