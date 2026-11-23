@@ -8,7 +8,7 @@ const meta = {
         layout: "fullscreen"
     },
     decorators: [Story => (
-        <div className="h-svh flex flex-col items-end justify-center overflow-hidden">
+        <div className="h-svh flex flex-col items-end justify-start overflow-hidden">
             <Story />
         </div>
     )]
